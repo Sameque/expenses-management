@@ -2,6 +2,8 @@
 /dist
 /node_modules
 
+/app_old
+
 # Logs
 logs
 *.log
@@ -246,3 +248,6 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,angular
+package-lock.json
+app/angular.json
+app/package.json
