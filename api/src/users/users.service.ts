@@ -10,17 +10,17 @@ export class UsersService {
     private userModel: Model<User>,
   ) {}
 
+  async create(user: User): Promise<User> {
+    const createdUser = new this.userModel(user);
+    return await createdUser.save();
+  }
+
   async findAll(): Promise<User[]> {
     return this.userModel.find().exec();
   }
 
   async findOne(id: string): Promise<User> {
     return await this.userModel.findById(id).exec();
-  }
-
-  async create(user: User): Promise<User> {
-    const createdUser = new this.userModel(user);
-    return await createdUser.save();
   }
 
   async delete(id: string): Promise<User> {

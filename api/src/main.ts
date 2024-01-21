@@ -10,9 +10,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = new DocumentBuilder()
     .setTitle('API Title')
-    .setDescription('API Description')
+    .setDescription('API Expense')
     .setVersion('1.0')
-    .addTag('users')
+    .addTag('Api Expense')
     .build();
   const options: SwaggerDocumentOptions = {
     operationIdFactory: (controllerKey: string, methodKey: string) => methodKey,
